@@ -5,7 +5,7 @@ const ShoppingItem = props => {
     const { items, cartItems, setCartItems, view } = useContext(ShopContext)
     const updateCartItems = (type, index) => {
         if (type === 'add') {
-            setCartItems(cartItems => [...cartItems, items[index]])
+            setCartItems(cartItems => [ ...cartItems, items[index] ])
         } else if(type === 'remove') {
             setCartItems(cartItems => cartItems.filter((item, indexed) => indexed !== index))
         }
